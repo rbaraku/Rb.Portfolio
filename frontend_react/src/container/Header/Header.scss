@@ -1,0 +1,370 @@
+
+.app__header-img {
+    width: 500px; /* Set the initial width */
+    height: 500px; /* Set the initial height */
+    border-radius: 50%; /* Make it a circle */
+    background-color: var(--red-color);
+    overflow: hidden; /* Hide any overflow beyond the circle */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    top: 50px;
+    right: 100px;
+  }
+  
+  .app__header-img img {
+    width: 800px; /* Make the image cover the entire circle */
+    height: 800px;
+    position: relative;
+    left: 90px;
+    top: 50px;
+    object-fit: cover; /* Maintain aspect ratio and cover the circle */
+  }
+  
+  @media screen and (min-width: 2000px) {
+    .app__header-img {
+      width: 500px; /* Adjust the width for smaller screens */
+      height: 500px; /* Adjust the height for smaller screens */
+    }
+  }
+
+  
+  @media screen and (max-width: 1200px) {
+    .app__header-img {
+      width: 400px; /* Adjust the width for even smaller screens */
+      height: 400px; /* Adjust the height for even smaller screens */
+      position: relative;
+      right: 80px;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .app__header-img {
+      width: 300px; /* Adjust the width for even smaller screens */
+      height: 300px; /* Adjust the height for even smaller screens */
+    }
+  }
+
+  .app__header {
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+  
+    padding: 10rem 2rem 0rem;
+  
+    @media screen and (min-width: 2000px) {
+      padding-top: 8rem;
+    }
+  
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
+  
+    @media screen and (max-width: 450px) {
+      padding: 6rem 1rem 2rem;
+    }
+  }
+
+  .app__header-info {
+    flex: 0.70;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 100%;
+  
+    margin: 0 2rem;
+  
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+      margin-right: 0rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 100%;
+      margin-top: 12.5rem;
+    }
+
+  }
+
+  .app__header-badge {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    top: -100px;
+  
+    .badge-cmp,
+    .tag-cmp, .header-cv {
+      padding: 1rem 2rem;
+      background: var(--white-color);
+      border-radius: 15px;
+      flex-direction: row;
+      width: auto;
+      
+  
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .badge-cmp {
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+      p{
+      color: var(--first-color);
+      font-size: 2rem;
+      margin-top: 12px;
+      font-weight: 400;
+      }
+
+      h1 {
+        color: var(--red-color);
+        margin-bottom: 18px;
+        font-weight: 800;
+        font-size: 2.5rem;
+      }
+    }
+  
+    .tag-cmp {
+      padding: 1rem 3rem;
+      //flex-direction: column;
+      margin-top: 5rem;
+  
+      p {
+        margin-top: 1rem;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--first-color);
+
+        //text-align: right;
+        
+      }
+    }
+
+
+
+  
+    span {
+      font-size: 2.5rem;
+  
+      @media screen and (min-width: 2000px) {
+        font-size: 5rem;
+      }
+    }
+
+    .header-cv {
+      //flex-direction: column;
+      margin-top: 2.5rem;
+      background: none;
+      box-shadow: none;
+      position: relative;
+      left: -30px;
+    }
+
+    .download{
+      font-size: small;
+      margin-right: 8px;
+      font-weight: 500;
+    }
+
+    .contact{
+      font-size: small;
+      margin-right: 8px;
+      font-weight: 500;
+      
+    }
+
+
+    a{
+        text-decoration: none;
+        
+    }
+  }
+
+
+  .app__header-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    position: relative;
+    top: -100px;
+
+
+    .header-cv {
+      //flex-direction: column;
+      margin-top: 5rem;
+      background: none;
+      box-shadow: none;
+      position: relative;
+      
+      //left: -30px;
+    }
+
+    .contact-me {
+      margin-top: 5rem;
+      background: none;
+      box-shadow: none;
+      position: relative;
+      margin-left: 20px;
+      
+    }
+
+    .download{
+      font-size: large;
+      margin-right: 8px;
+      font-weight: 500;
+    }
+
+    .contact{
+      font-size: large;
+      margin-right: 8px;
+      font-weight: 500;
+      
+    }
+
+    .down-button{
+      background-color: var(--red-color);
+      border: none;
+      padding-top: 1rem;
+      width: 165px; 
+      height: 60px;
+    }
+
+    .contact-button{
+      background-color: var(--red-color);
+      border: none;
+      padding-top: 1rem;
+      width: 125px; 
+      height: 60px;
+    }
+
+    .down-button:active {
+      background-color: var(--black-color);
+  }
+
+    .contact-button:active {
+        background-color: var(--black-color);
+    }
+
+    .contact-button:hover {
+      background-color: var(--red-color-darker);
+  }
+
+  .down-button:hover {
+    background-color: var(--red-color-darker);
+}
+
+  }
+
+
+.app__header-socials1{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+  color: #000;
+  position: relative;
+  bottom: -25px;
+  right: 30px;
+  top: -50px;
+  
+
+
+  .starting-icon{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    bottom: 60px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .linked-in{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: -10px;
+    right: 100px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .L-link{
+    color: black;
+  }
+
+  .linked-in:hover {
+    background-color: #0a66c2;
+    .L-link{
+      color: white;
+    }
+  }
+
+  .github {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    bottom: -110px;
+    right: 100px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .4s;
+  }
+
+  .G-link{
+    color: black;
+  }
+
+  .github:hover {
+    background-color: #171515;
+    .G-link{
+      color: white;
+    }
+  }
+
+  .ending-icon{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    bottom: -160px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    
+  }
+
+
+}
+
+
+
+
+
+
+  
+
+  
+
+
+
+
+
+
+    
+
+
+
+
+
