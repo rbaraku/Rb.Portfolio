@@ -45,6 +45,7 @@ import fnlogo from '../assets/fnlogo.png';
 import me1 from '../assets/me1.png';
 import me2 from '../assets/me2.png';
 import rbnobg from '../assets/rbnobg.png';
+import blurryRB from '../assets/blurryRB.png';
 
 export default {
   email,
@@ -91,4 +92,5 @@ export default {
   me1,
   me2,
   rbnobg,
+  blurryRB,
 };

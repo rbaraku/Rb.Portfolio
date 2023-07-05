@@ -18,11 +18,14 @@ import { FaLinkedinIn } from 'react-icons/fa'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+import { AppWrap } from '../../wrapper';
 
 import './Header.scss';
 
 
 
+const isBigScreen = window.innerWidth >= 1500;
+const iconSize = 48 ;
 
 const scaleVariants = {
   whileInView: {
@@ -36,8 +39,9 @@ const scaleVariants = {
 }
 
 const Header = () => {
+  const isBigScreen = window.innerWidth >= 1500;
   return (
-    <div className='app__header app__flex'>
+    <><div className='app__header app__flex'>
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
         transition={{ duration: 0.5 }}
@@ -57,94 +61,168 @@ const Header = () => {
           </div>
 
           <div className='tag-cmp app__flex'>
-          <p className='p-text'>
-            Frontend Developer
-          </p>
+            <p className='p-text'>
+              Frontend Developer
+            </p>
           </div>
         </div>
 
         <div className='app__header-buttons'>
           <div className='header-cv app__flex'>
             <Button href='#' className='down-button'>
-            <i className='download'>
-              Download CV
-            </i>
-            <BsDownload></BsDownload>
+              <i className='download'>
+                Download CV
+              </i>
+              <BsDownload></BsDownload>
             </Button>
           </div>
 
           <div className='contact-me app__flex'>
             <Button href='#' className='contact-button'>
               <i className='contact'>
-              Contact
+                Contact
               </i>
               <MdContactPage></MdContactPage>
             </Button>
           </div>
-          </div>
+        </div>
       </motion.div>
 
-      <motion.div
-        whileInView={{ x: [100, 0], opacity: [0, 1] }}
-        transition={{ duration: 1.5 }}
-        className='app__header-socials-info'
+      <motion.div style={{ marginLeft: -50 }}
+        animate={{ x: 100 }}
+        transition={{ type: "spring", stiffness: 100 }}
+        className='app__header-img'
       >
-      <div className='app__header-socials1'>
-      <motion.div
-        whileInView={{ x: [300, -100], y: [0, -50], opacity: [0, 1] }}
-        transition={{ duration: 1.5 }}
-        className='app__header-socials-info'
-      >
+        <img src={images.rbnobg} alt='me2_bg' />
+      </motion.div>
+
+      
+      {/*{isBigScreen ? (
+      <motion.div>
+        <div className='app__header-socials1'>
+          <motion.div
+            animate={{ x: [300, -100], y: [0, -50], opacity: [0, 1] }}
+            transition={{ duration: 1.5 }}
+            className='app__header-socials-info'
+          >
             <div className='starting-icon app__flex'>
-            <RiCodeSLine size={36}></RiCodeSLine>
+              <RiCodeSLine size={36}></RiCodeSLine>
             </div></motion.div>
-            <motion.div
-        whileInView={{ x: [500, -125], opacity: [0, 1] }}
-        transition={{ duration: 3 }}
-        className='app__header-socials-info'
-      >
+
+          <motion.div
+            animate={{ x: [500, -125], opacity: [0, 1] }}
+            transition={{ duration: 3 }}
+            className='app__header-socials-info'
+          >
             <div className='linked-in app__flex'>
               <a href='' className='L-link'><FaLinkedinIn size={48}></FaLinkedinIn>
               </a>
             </div></motion.div>
 
-            <motion.div
-        whileInView={{ x: [500, -125], opacity: [0, 1] }}
-        transition={{ duration: 3 }}
-        className='app__header-socials-info'
-      >
+          <motion.div
+            animate={{ x: [500, -125], opacity: [0, 1] }}
+            transition={{ duration: 3 }}
+            className='app__header-socials-info'
+          >
             <div className='github app__flex'>
               <a href='' className='G-link'><BsGithub size={48}></BsGithub>
               </a>
             </div></motion.div>
 
-            <motion.div
-        whileInView={{ x: [200, -100], y: [0, 100], opacity: [0, 1] }}
-        transition={{ duration: 1.5 }}
-        className='app__header-socials-info'
-      >
+          <motion.div
+            animate={{ x: [200, -100], y: [0, 100], opacity: [0, 1] }}
+            transition={{ duration: 1.5 }}
+            className='app__header-socials-info'
+          >
             <div className='ending-icon app__flex'>
               <RiCodeSSlashLine size={36}></RiCodeSSlashLine>
             </div></motion.div>
 
-          </div>
-          </motion.div>
-
-
-      
-
-      <motion.div style={{marginLeft: -50 }}
-        animate={{ x: 100 }}
-        transition={{ type: "spring", stiffness: 100 }}
-        className='app__header-img'
-      >
-        <img src={images.rbnobg} alt='me2_bg'/>
+        </div>
       </motion.div>
-        
-      
+      ) : (
+        <div className='app__header-socials2'>
+            <div className='starting-icon app__flex'>
+              <RiCodeSLine size={36}></RiCodeSLine>
+            </div>
+
+            <div className='linked-in app__flex'>
+              <a href='' className='L-link'><FaLinkedinIn size={48}></FaLinkedinIn>
+              </a>
+            </div>
+
+            <div className='github app__flex'>
+              <a href='' className='G-link'><BsGithub size={48}></BsGithub>
+              </a>
+            </div>
+
+            <div className='ending-icon app__flex'>
+              <RiCodeSSlashLine size={36}></RiCodeSSlashLine>
+            </div>
+
+        </div>
+      )
+      }*/}
+
+
+  <div className='app__header-socials1'>
+
+
+  <div className='starting-icon app__flex'>
+              <RiCodeSLine className='startSize'></RiCodeSLine>
+            </div>
+
+            <div className='linked-in app__flex'>
+              <a href='' className='L-link'><FaLinkedinIn className='linkedSize'></FaLinkedinIn>
+              </a>
+            </div>
+
+            <div className='github app__flex'>
+              <a href='' className='G-link'><BsGithub className='gitSize'></BsGithub>
+              </a>
+            </div>
+
+            <div className='ending-icon app__flex'>
+              <RiCodeSSlashLine className='endSize'></RiCodeSSlashLine>
+            </div>
 
     </div>
+
+    </div>
+
+    
+    <div>
+
+      </div></>
   )
 }
 
-export default Header
+export default AppWrap(Header, 'home');
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /*whileInView={{ x: [300, -100], y: [0, 500], opacity: [0, 1] }}
+        transition={{ duration: 1.5 }}
+      className='app__header-socials-info-mobile'
+      
+            {isBigScreen ? (
+
+
+      ) : (
+              <motion.div 
+          whileInView={{ x: [300, -100], y: [0, 500], opacity: [0, 1] }}
+          transition={{ duration: 1.5 }}
+          className='app__header-socials-info-mobile'
+          ></motion.div>
+          )}
+      */

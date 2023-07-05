@@ -59,7 +59,7 @@
     text-transform: capitalize;
   
     span {
-      color: var(--secondary-color);
+      color: var(--red-color);
     }
   
     @media screen and (min-width: 2000px) {
@@ -126,8 +126,9 @@
       }
   
       &:hover {
-        background-color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        cursor: pointer;
+        background-color: var(--red-color);
+        border-color: var(--red-color);
   
         svg {
           color: var(--white-color);
@@ -166,7 +167,7 @@
       transition: background-color 0.2s ease-in-out;
   
       &:hover {
-        background-color: var(--secondary-color);
+        background-color: var(--red-color);
       }
   
       @media screen and (min-width: 2000px) {

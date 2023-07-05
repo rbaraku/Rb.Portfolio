@@ -30,6 +30,10 @@
         width: 180px;
         height: 80px;
         }
+        @media screen and (max-width: 900px) {
+          position: relative;
+          right: 60px;
+        }
     }
 }
 
@@ -84,6 +88,8 @@
 
   background-color: var(--red-color);
 
+
+
   svg{
     width: 70%;
     height: 70%;
@@ -107,7 +113,7 @@
     align-items: flex-end;
     flex-direction: column;
     
-    background: url('../../assets/bgWhite.png');
+    //background: url('../../assets/bgWhite.png');
     background-color: var(--white-color);
     background-size: cover;
     background-repeat: repeat;
@@ -175,7 +181,7 @@
   align-items: center;
   position: absolute;
   right: 200px;
-  bottom: 25px;
+  bottom: 30px;
 
   @media screen and (max-width: 900px) {
       .transparent-button{
@@ -193,6 +199,7 @@
     transition: all 0.3s ease-in-out; 
     &:hover {
       color:var(--black-color);
+      cursor: pointer;
       }
     }
  }

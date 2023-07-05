@@ -17,7 +17,7 @@ const Navbar = () => {
         <img src={images.fnlogo} alt='logo' />
       </div>
       <ul className='app__navbar-links'>
-        {['home', 'about', 'contact', 'work', 'skills'].map((item) => (
+        {['home', 'about', 'contact', 'projects', 'skills'].map((item) => (
           <li className='app__flex p-text' key ={`link-${item}`}>
             <div />
             <a href={`#${item}`}>{item}</a>
@@ -26,9 +26,9 @@ const Navbar = () => {
       </ul>
 
       <div className='dark-mode'>
-        <Button className='transparent-button'>
+        <div className='transparent-button'>
       <MdOutlineDarkMode size={20}></MdOutlineDarkMode>
-      </Button>
+      </div>
       </div>
 
       <div className='app__navbar-menu'>
