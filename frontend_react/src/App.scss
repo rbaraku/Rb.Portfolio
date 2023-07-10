@@ -44,6 +44,7 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
+
   
     p {
       text-transform: uppercase;
@@ -177,7 +178,7 @@
     }
   }
   
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1000px) {
     .app__navigation,
     .app__social {
       display: none;
@@ -185,5 +186,8 @@
   
     .copyright {
       padding: 2rem;
+      display: none;
     }
   }
+
+  

@@ -14,6 +14,16 @@ export default{
             type:'string'
         },
         {
+          name:'description2',
+          title:'Description2',
+          type:'string'
+      },
+      {
+        name:'description3',
+        title:'Description3',
+        type:'string'
+    },
+        {
             name:'imgUrl',
             title:'ImgUrl',
             type: 'image',

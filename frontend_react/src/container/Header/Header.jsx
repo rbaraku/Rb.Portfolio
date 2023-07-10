@@ -90,7 +90,8 @@ const Header = () => {
 
       <motion.div style={{ marginLeft: -50 }}
         animate={{ x: 100 }}
-        transition={{ type: "spring", stiffness: 100 }}
+        transition={{  duration: 0.5 }}
+        whileInView={{ x: [300, 100], opacity: [0, 1] }}
         className='app__header-img'
       >
         <img src={images.rbnobg} alt='me2_bg' />
@@ -165,7 +166,9 @@ const Header = () => {
       }*/}
 
 
-  <div className='app__header-socials1'>
+<motion.div className='app__header-socials1'
+        whileInView={{ y: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}>
 
 
   <div className='starting-icon app__flex'>
@@ -186,14 +189,12 @@ const Header = () => {
               <RiCodeSSlashLine className='endSize'></RiCodeSSlashLine>
             </div>
 
-    </div>
+            </motion.div>
 
     </div>
 
     
-    <div>
-
-      </div></>
+    </>
   )
 }
 

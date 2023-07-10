@@ -26,16 +26,31 @@
     .app__header-img {
       width: 500px; /* Adjust the width for smaller screens */
       height: 500px; /* Adjust the height for smaller screens */
+      left: -150px;
+      top: -100px;
     }
   }
 
   
   @media screen and (max-width: 1350px) {
     .app__header-img {
-      width: 400px; /* Adjust the width for even smaller screens */
-      height: 400px; /* Adjust the height for even smaller screens */
+      width: 450px; /* Adjust the width for even smaller screens */
+      height: 450px; /* Adjust the height for even smaller screens */
       position: relative;
-      top: -10px;
+      top: 100px;
+      // top: -570px;
+      right: 50px;
+    }
+    .app__header-img img {
+      height: 700px;
+      width: 600px;
+      left: 80px;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .app__header-img {
+      top: -30px;
       right: 80px;
     }
   }
@@ -66,7 +81,7 @@
 
   
     @media screen and (min-width: 2000px) {
-      padding-top: 8rem;
+      //padding-top: 8rem;
     }
   
     @media screen and (max-width: 1350px) {
@@ -94,6 +109,16 @@
       margin-top: 8rem;
     }
 
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      margin-left: 8rem;
+    }
+
+    @media screen and (max-width: 450px) {
+      width: 100%;
+      margin-left: 0;
+    }
+
     // @media screen and (min-width: 1350px) {
     //   width: 100%;
     //   margin-top: 12.5rem;
@@ -108,7 +133,7 @@
     align-items: flex-start;
     flex-direction: column;
     position: relative;
-    top: 100px;
+    top: 120px;
 
 
     @media screen and (max-width: 1350px) {
@@ -139,6 +164,7 @@
       margin-top: 12px;
       font-weight: 400;
       }
+
 
       h1 {
         color: var(--red-color);
@@ -214,7 +240,7 @@
     align-items: flex-start;
     flex-direction: row;
     position: relative;
-    top: 100px;
+    top: 120px;
 
 
     @media screen and (max-width: 1350px) {
@@ -389,19 +415,57 @@
 
 
   @media screen and (max-width: 1350px) {
+
+  // .starting-icon{
+  //   height: 50px;
+  //   width: 50px;
+  // }
+
+  // .startSize{
+  //   font-size: 18px;
+  // }
+
+  // .linked-in{
+  //   size: 12;
+  //   height: 80px;
+  //   width: 80px;
+  // }
+
+  // .linkedSize{
+  //   font-size: 28px;
+  // }
+
+  // .github {
+  //   height: 80px;
+  //   width: 80px;
+  // }
+
+  // .gitSize{
+  //   font-size: 28px;
+  // }
+
+  // .ending-icon{
+  //   height: 50px;
+  //   width: 50px;
+  // }
+
+  // .endSize{
+  //   font-size: 18px;
+  // }
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
-    flex-direction: row;
+    flex-direction: column;
     position: relative;
-    right: 0px;
-    top: 70px;
-    gap: 15px;
+    right: -700px;
+    top: -950px;
+    
 
     .starting-icon{
       height: 50px;
       width: 50px;
+     // left: 80px;
     }
     
     .startSize{
@@ -411,8 +475,8 @@
     .linked-in{
       height: 80px;
       width: 80px;
-      top: -30px;
-      right: 0px;
+      // top: -30px;
+      // right: -30px;
     }
 
     .linkedSize{
@@ -422,8 +486,8 @@
     .github{
       height: 80px;
       width: 80px;
-      top: -30px;
-      left: 0px;
+     // top: -30px;
+      //left: -5px;
 
     }
 
@@ -434,8 +498,8 @@
     .ending-icon{
       height: 50px;
       width: 50px;
-      top: -65px;
-      right: 10px;
+      //bottom: 15px;
+     // right: 70px;
     }
 
     .endSize{
@@ -443,7 +507,73 @@
     }
 }
 
+// @media screen and (min-width: 2000px) {
+//   display: flex;
+//   justify-content: flex-start;
+//   align-items: flex-start;
+//   flex-direction: column;
+//   color: #000;
+//   position: relative;
+//   right: 630px;
+//   bottom: 160px;
+// }
 
+
+@media screen and (max-width: 900px) {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: row;
+  position: relative;
+  right: 0px;
+  top: 70px;
+  gap: 15px;
+
+  .starting-icon{
+    left: -0px;
+    height: 50px;
+    width: 50px;
+  }
+  
+  .startSize{
+    font-size: 18px;
+  }
+
+  .linked-in{
+    height: 80px;
+    width: 80px;
+    top: -30px;
+    right: 0px;
+  }
+
+  .linkedSize{
+    font-size: 28px;
+  }
+
+  .github{
+    height: 80px;
+    width: 80px;
+    top: -30px;
+    left: 0px;
+
+  }
+
+  .gitSize{
+    font-size: 28px;
+  }
+
+  .ending-icon{
+    height: 50px;
+    width: 50px;
+    top: -65px;
+    right: 10px;
+  }
+
+  .endSize{
+    font-size: 18px;
+  }
+ }
 }
 
 
@@ -461,6 +591,15 @@
   .copyright{
     display: none;
   }
+}
+
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;    
 }
 
 

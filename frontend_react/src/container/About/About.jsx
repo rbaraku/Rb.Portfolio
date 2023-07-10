@@ -1,6 +1,6 @@
-import React, { useState, useEffect} from 'react'
+import React, { useState, useEffect, useRef} from 'react'
 import { motion } from 'framer-motion';
-import { images } from '../../constants';
+import { imgs } from '../../constants';
 import { AppWrap } from '../../wrapper';
 
 import './About.scss';
@@ -19,6 +19,17 @@ const About = () => {
     });
   }, []);
 
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const handleMouseEnter = (index) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+  };
+
+
   return (
     <>
           <motion.div
@@ -32,21 +43,45 @@ const About = () => {
       </h2>
 
     <div className='about-header'>
-    {abouts.map((about) => (
+    {abouts.map((about) =>  (
+      
       <>
       <div className='about-img'>
-          <div className='img img1'> 
-          <img src={urlFor(about.imgUrl)} alt={about.title} />
+          <div className={`img img1 ${hoveredIndex === 0 ? 'img-hovered' : ''}`}> 
+          <img className='im1' 
+          src={urlFor(about.imgUrl)} alt={about.title} 
+          onMouseEnter={() => handleMouseEnter(0)} 
+          onMouseLeave= {handleMouseLeave}/> 
             </div>
-          <div className='img img2'>
-          <img src={urlFor(about.imgUrl2)} alt={about.title} /> 
+
+          <div className={`img img2 ${hoveredIndex === 1 ? 'img-hovered' : ''}`}>
+          <img className= 'im2' 
+          src={urlFor(about.imgUrl2)} alt={about.title} 
+          onMouseEnter={() => handleMouseEnter(1)} 
+          onMouseLeave= {handleMouseLeave}/> 
             </div>
-          <div className='img img3'> 
-          <img src={urlFor(about.imgUrl3)} alt={about.title} />
+
+          <div className={`img img3 ${hoveredIndex === 2 ? 'img-hovered' : ''}`}> 
+          <img className= 'im3' 
+          src={urlFor(about.imgUrl3)} 
+          alt={about.title} 
+          onMouseEnter={() => handleMouseEnter(2)} 
+          onMouseLeave= {handleMouseLeave}/>
            </div>
         </div>
+
         <div className='app__about-text'>
+        <div className={`paragraph-container ${hoveredIndex === 0 ? 'paragraph-hovered' : ''}`}>
         <p>{about.description}</p>
+        </div>
+
+        <div className={`paragraph-container ${hoveredIndex === 1 ? 'paragraph-hovered' : ''}`}>
+        <p>{about.description2}</p>
+        </div>
+
+        <div className={`paragraph-container ${hoveredIndex === 2 ? 'paragraph-hovered' : ''}`}>
+        <p>{about.description3}</p>
+        </div>
       </div></>
       ))}
       </div>   

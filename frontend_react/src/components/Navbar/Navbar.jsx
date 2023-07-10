@@ -27,7 +27,7 @@ const Navbar = () => {
 
       <div className='dark-mode'>
         <div className='transparent-button'>
-      <MdOutlineDarkMode size={20}></MdOutlineDarkMode>
+      <MdOutlineDarkMode className='darkSize'></MdOutlineDarkMode>
       </div>
       </div>
 
