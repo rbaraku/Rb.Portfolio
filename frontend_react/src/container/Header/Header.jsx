@@ -54,6 +54,7 @@ const Header = () => {
               <p className='p-text'>
                 Hello, I am
               </p>
+              <span className='block'></span>
               <h1 className='head-text'>
                 Rron
               </h1>
@@ -62,7 +63,7 @@ const Header = () => {
 
           <div className='tag-cmp app__flex'>
             <p className='p-text'>
-              Frontend Developer
+              Software Developer
             </p>
           </div>
         </div>

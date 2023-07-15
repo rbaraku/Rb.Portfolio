@@ -15,6 +15,7 @@
   --red-color: #f67571;
   --red-color-darker: #dd7571;
   --first-color: hsl(var(--hue-color), 89%, 60%);
+  --color: #fefefe;
 }
 
 * {

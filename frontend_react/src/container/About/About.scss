@@ -133,10 +133,24 @@
   
 }
 
+.paragraph-container{
+    p{
+        background-image: linear-gradient(#ffd900, #ffd900);
+        background-repeat: no-repeat;
+        background-position: 0% 100%;
+        background-size: 100% 2px;
+        transition: background-size .5s, background-position .3s ease-in .5s;
+    }
+}
+
 .paragraph-container.paragraph-hovered p{
     transform: scale(1.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.7s ease;
     font-weight: 400;
+    background-size: 100% 100%;
+    background-position: 0% 0%;
+	transition: background-position .5s, background-size .3s ease-in .5s;
+
 }
 
 .head-text{

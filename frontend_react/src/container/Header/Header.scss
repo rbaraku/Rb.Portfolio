@@ -1,31 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400|Poppins:300,400,800&display=swap');
 
 .app__header-img {
-    width: 500px; /* Set the initial width */
-    height: 500px; /* Set the initial height */
-    border-radius: 50%; /* Make it a circle */
+    width: 500px; 
+    height: 500px;
+    border-radius: 50%;
     background-color: var(--red-color);
-    overflow: hidden; /* Hide any overflow beyond the circle */
+    overflow: hidden; 
     position: relative;
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
     align-items: center;
     top: -10px;
     right: 0px;
   }
   
   .app__header-img img {
-    width: 900px; /* Make the image cover the entire circle */
+    width: 900px; 
     height: 900px;
     position: relative;
     left: 110px;
     top: 80px;
-    object-fit: cover; /* Maintain aspect ratio and cover the circle */
+    object-fit: cover; 
   }
   
   @media screen and (min-width: 2000px) {
     .app__header-img {
-      width: 500px; /* Adjust the width for smaller screens */
-      height: 500px; /* Adjust the height for smaller screens */
+      width: 500px; 
+      height: 500px;
       left: -150px;
       top: -100px;
     }
@@ -34,8 +35,8 @@
   
   @media screen and (max-width: 1350px) {
     .app__header-img {
-      width: 450px; /* Adjust the width for even smaller screens */
-      height: 450px; /* Adjust the height for even smaller screens */
+      width: 450px; 
+      height: 450px; 
       position: relative;
       top: 100px;
       // top: -570px;
@@ -57,8 +58,8 @@
 
   @media screen and (max-width: 450px) {
     .app__header-img {
-      width: 300px; /* Adjust the width for even smaller screens */
-      height: 400px; /* Adjust the height for even smaller screens */
+      width: 300px; 
+      height: 400px; 
       position: relative;
       top: -15px;
     }
@@ -171,13 +172,19 @@
         margin-bottom: 18px;
         font-weight: 800;
         font-size: 2.5rem;
-      }
     }
-  
+  }
+
+
+
     .tag-cmp {
       padding: 1rem 3rem;
       //flex-direction: column;
       margin-top: 5rem;
+
+      @media screen and (max-width: 450px) {
+       margin-left: -0.5rem;
+      }
   
       p {
         margin-top: 1rem;
@@ -186,10 +193,25 @@
         font-size: 20px;
         font-weight: 500;
         color: var(--first-color);
-
-        //text-align: right;
-        
+        overflow: hidden; 
+        border-right: .15em solid orange; 
+        white-space: nowrap; 
+        margin: 0 auto; 
+        letter-spacing: .15em; 
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
       }
+
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: var(--first-color) }
     }
 
 
@@ -206,8 +228,8 @@
     .header-cv {
       //flex-direction: column;
       margin-top: 2.5rem;
-      background: none;
-      box-shadow: none;
+      //background: none;
+      //box-shadow: none;
       position: relative;
       left: -30px;
     }
@@ -415,43 +437,6 @@
 
 
   @media screen and (max-width: 1350px) {
-
-  // .starting-icon{
-  //   height: 50px;
-  //   width: 50px;
-  // }
-
-  // .startSize{
-  //   font-size: 18px;
-  // }
-
-  // .linked-in{
-  //   size: 12;
-  //   height: 80px;
-  //   width: 80px;
-  // }
-
-  // .linkedSize{
-  //   font-size: 28px;
-  // }
-
-  // .github {
-  //   height: 80px;
-  //   width: 80px;
-  // }
-
-  // .gitSize{
-  //   font-size: 28px;
-  // }
-
-  // .ending-icon{
-  //   height: 50px;
-  //   width: 50px;
-  // }
-
-  // .endSize{
-  //   font-size: 18px;
-  // }
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -506,18 +491,6 @@
       font-size: 18px;
     }
 }
-
-// @media screen and (min-width: 2000px) {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: flex-start;
-//   flex-direction: column;
-//   color: #000;
-//   position: relative;
-//   right: 630px;
-//   bottom: 160px;
-// }
-
 
 @media screen and (max-width: 900px) {
   width: 100%;
