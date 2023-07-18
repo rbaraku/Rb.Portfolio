@@ -37,7 +37,7 @@ const About = () => {
         transition={{ duration: 0.5 }}
         className='app__about-info'
       >
-      <h2 className='head-text'>
+      <h2 className='about-head-text'>
         A Little Bit
         <span> About Me</span>
       </h2>

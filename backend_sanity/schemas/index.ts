@@ -1,5 +1,5 @@
 import testimonials from './testimonials'
-import works from './works'
+import works from './projects'
 import brands from './brands'
 import abouts from './abouts'
 import experiences from './experiences'
