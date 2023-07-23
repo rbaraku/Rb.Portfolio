@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef} from 'react'
 import { motion } from 'framer-motion';
 import { imgs } from '../../constants';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 import './About.scss';
 
@@ -39,7 +39,7 @@ const About = () => {
       >
       <h2 className='about-head-text'>
         A Little Bit
-        <span> About Me</span>
+        <span> About </span> Me
       </h2>
 
     <div className='about-header'>
@@ -92,4 +92,4 @@ const About = () => {
 
 
 
-export default AppWrap(About, 'about')
+export default AppWrap (MotionWrap(About, 'app__about'), 'about', "app__whitebg")

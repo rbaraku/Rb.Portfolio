@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
-import { MdOutlineDarkMode } from 'react-icons/md'
+import { MdOutlineDarkMode } from 'react-icons/md';
+import { BsSun } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 
 import { images } from '../../constants';
@@ -11,10 +12,23 @@ import { Button } from 'react-bootstrap';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+    const [isFilled, setIsFilled] = useState(false);
+  
+    const handleIconClick = () => {
+      setIsFilled(!isFilled);
+    };
+
+    const handleScrollToHome = () => {
+      const homeSection = document.getElementById('home');
+      if (homeSection) {
+        homeSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+
   return (
     <nav className='app__navbar'>
-      <div className='app__navbar-logo'>
-        <img src={images.fnlogo} alt='logo' />
+      <div className='app__navbar-logo' onClick={handleScrollToHome}>
+        <img src={images.fnlogo} alt='logo'/>
       </div>
       <ul className='app__navbar-links'>
         {['home', 'about', 'projects', 'skills', 'contact'].map((item) => (
@@ -27,7 +41,11 @@ const Navbar = () => {
 
       <div className='dark-mode'>
         <div className='transparent-button'>
-      <MdOutlineDarkMode className='darkSize'></MdOutlineDarkMode>
+        {isFilled ? (
+        <MdOutlineDarkMode className='darkSize' onClick={handleIconClick}/>
+      ) : (
+        <BsSun className='darkSize' onClick={handleIconClick}/>
+        )}
       </div>
       </div>
 
@@ -74,5 +92,6 @@ export const DarkModeButton = () => {
     </button>
   );
 };
+
 
 

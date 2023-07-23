@@ -46,6 +46,7 @@ import me1 from '../assets/me1.png';
 import me2 from '../assets/me2.png';
 import rbnobg from '../assets/rbnobg.png';
 import blurryRB from '../assets/blurryRB.png';
+import mail from '../assets/mail.png';
 
 export default {
   email,
@@ -93,4 +94,5 @@ export default {
   me2,
   rbnobg,
   blurryRB,
+  mail,
 };

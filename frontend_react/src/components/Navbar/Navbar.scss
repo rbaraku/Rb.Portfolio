@@ -35,10 +35,13 @@
           right: 60px;
         }
         @media screen and (max-width: 450px) {
-          height: 45px;
           width: 100px;
           top: 5px;
         }
+    }
+
+    &:hover{
+      cursor: pointer;
     }
 }
 
