@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { MdOutlineDarkMode } from 'react-icons/md';
 import { BsSun } from 'react-icons/bs';
-import { motion } from 'framer-motion';
+import { easeInOut, motion } from 'framer-motion';
 
 import { images } from '../../constants';
 import './Navbar.scss';
@@ -50,9 +50,9 @@ const Navbar = () => {
       <div className='dark-mode'>
         <button className='transparent-button'>
         {darkMode ? (
-        <BsSun className='darkSize' onClick={handleDarkModeToggle}/>
+        <BsSun className='darkSize' onClick={handleDarkModeToggle} transitionDelay/>
       ) : (
-        <MdOutlineDarkMode className='darkSize' onClick={handleDarkModeToggle}/>
+        <MdOutlineDarkMode className='darkSize' onClick={handleDarkModeToggle} transitionDelay/>
         )}
       </button>
       </div>

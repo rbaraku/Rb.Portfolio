@@ -24,22 +24,15 @@ import './Header.scss';
 
 
 
-const isBigScreen = window.innerWidth >= 1500;
-const iconSize = 48 ;
 
-const scaleVariants = {
-  whileInView: {
-    scale:[0,1],
-    opacity:[0,1],
-    transition:{
-      duration: 1,
-      ease: 'easeInOut'
-    }
-  }
-}
 
 const Header = () => {
-  const isBigScreen = window.innerWidth >= 1500;
+    const handleScrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <><div className='app__header app__flex'>
       <motion.div
@@ -79,7 +72,7 @@ const Header = () => {
           </div>
 
           <div className='contact-me app__flex'>
-            <Button href='#' className='contact-button'>
+            <Button  className='contact-button' onClick={handleScrollToContact}>
               <i className='contact'>
                 Contact
               </i>
@@ -101,7 +94,7 @@ const Header = () => {
 
 <motion.div className='app__header-socials1'
         whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}>
+        transition={{ duration: 0.0 }}>
 
 
   <div className='starting-icon app__flex'>
@@ -109,12 +102,12 @@ const Header = () => {
             </div>
 
             <div className='linked-in app__flex'>
-              <a href='' className='L-link'><FaLinkedinIn className='linkedSize'></FaLinkedinIn>
+              <a href='https://www.linkedin.com/in/rron-baraku-40893a276/' target='_blank' className='L-link'><FaLinkedinIn className='linkedSize'></FaLinkedinIn>
               </a>
             </div>
 
             <div className='github app__flex'>
-              <a href='' className='G-link'><BsGithub className='gitSize'></BsGithub>
+              <a href='https://github.com/rbaraku' target='_blank' className='G-link'><BsGithub className='gitSize'></BsGithub>
               </a>
             </div>
 
@@ -132,31 +125,3 @@ const Header = () => {
 }
 
 export default AppWrap(Header, 'home');
-
-
-
-
-
-
-
-
-
-
-
-
-
-        /*whileInView={{ x: [300, -100], y: [0, 500], opacity: [0, 1] }}
-        transition={{ duration: 1.5 }}
-      className='app__header-socials-info-mobile'
-      
-            {isBigScreen ? (
-
-
-      ) : (
-              <motion.div 
-          whileInView={{ x: [300, -100], y: [0, 500], opacity: [0, 1] }}
-          transition={{ duration: 1.5 }}
-          className='app__header-socials-info-mobile'
-          ></motion.div>
-          )}
-      */

@@ -1,14 +1,17 @@
 .app {
     background-color: var(--primary-color);
+    transition: background-color .3s ease-in-out;
     font-family: var(--font-base);
   }
   
   .app__whitebg {
     background-color: var(--white-color);
+    transition: background-color .3s ease-in-out;
   }
   
   .app__primarybg {
     background-color: var(--primary-color);
+    transition: background-color .3s ease-in-out;
   }
   
   .app__container {
@@ -49,6 +52,7 @@
     p {
       text-transform: uppercase;
       color: var(--black-color);
+      transition: color .3s ease-in-out;
     }
   }
   
@@ -57,6 +61,7 @@
     font-weight: 800;
     text-align: center;
     color: var(--black-color);
+    transition: color .3s ease-in-out;
     text-transform: capitalize;
   
     span {
@@ -76,6 +81,7 @@
     font-size: 0.8rem;
     text-align: left;
     color: var(--gray-color);
+    transition: color .3s ease-in-out;
     line-height: 1.5;
   
     @media screen and (min-width: 2000px) {
@@ -127,7 +133,6 @@
       }
   
       &:hover {
-        cursor: pointer;
         background-color: var(--red-color);
         border-color: var(--red-color);
   

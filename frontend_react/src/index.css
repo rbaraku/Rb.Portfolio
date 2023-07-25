@@ -30,11 +30,6 @@
     --gray-color: #ffffff;
   }
 
-/* .dark{
-  --primary-color: #030303;
-  --white-color: #e4e4e4
-} */
-
 * {
   box-sizing: border-box;
   padding: 0;

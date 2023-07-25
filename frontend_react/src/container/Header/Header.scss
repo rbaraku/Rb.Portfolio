@@ -319,7 +319,7 @@
     .contact-button{
       background-color: var(--red-color);
       border: none;
-      padding-top: 1rem;
+      padding-top: -2rem;
       width: 125px; 
       height: 60px;
     }
@@ -380,7 +380,6 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     color: #000;
-    cursor: pointer;
   }
 
   .L-link{
@@ -392,6 +391,7 @@
     transition: background-color 0.3s ease-in-out;
     .L-link{
       color: white;
+      cursor: pointer;
     }
   }
 
@@ -407,7 +407,6 @@
     right: 100px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    cursor: pointer;
     transition: .4s;
   }
 
@@ -424,6 +423,7 @@
     transition: background-color 0.3s ease-in-out;
     .G-link{
       color: white;
+      cursor: pointer;
     }
   }
 
