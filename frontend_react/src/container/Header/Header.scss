@@ -198,7 +198,7 @@
         font-weight: 500;
         color: var(--first-color);
         overflow: hidden; 
-        border-right: .15em solid orange; 
+        border-right: .15em solid; 
         white-space: nowrap; 
         margin: 0 auto; 
         letter-spacing: .15em; 
@@ -357,6 +357,7 @@
 
 
   .starting-icon{
+    color: var(--black-color);
     height: 70px;
     width: 70px;
     position: relative;
@@ -383,7 +384,7 @@
   }
 
   .L-link{
-    color: black;
+    color: var(--black-color);
   }
 
   .linked-in:hover {
@@ -415,7 +416,7 @@
   }
 
   .G-link{
-    color: black;
+    color: var(--black-color);
   }
 
   .github:hover {
@@ -427,6 +428,7 @@
   }
 
   .ending-icon{
+    color: var(--black-color);
     height: 70px;
     width: 70px;
     position: relative;

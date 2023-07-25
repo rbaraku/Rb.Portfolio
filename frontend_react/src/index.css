@@ -3,6 +3,8 @@
 :root {
   --font-base: "DM Sans", sans-serif;
 
+
+  --text-color: #6b7688;
   --primary-color: #edf2f8;
   --secondary-color: #313bac;
   --black-color: #030303;
@@ -11,12 +13,27 @@
   --dark-gray-color:#424445;
   --brown-color: #46364a;
   --white-color: #ffffff;
-  --yellow-color: #ffd504;
+  --yellow-color: #ffd900;
   --red-color: #f67571;
   --red-color-darker: #dd7571;
   --first-color: hsl(var(--hue-color), 89%, 60%);
   --color: #fefefe;
 }
+
+  [data-theme='dark']{
+    --yellow-color: #c7a903;
+    --dark-gray-color:#c7c4c4;
+    --first-color: #fefefe;
+    --black-color: #ffffff;
+    --primary-color: #404040;
+    --white-color: #424445;
+    --gray-color: #ffffff;
+  }
+
+/* .dark{
+  --primary-color: #030303;
+  --white-color: #e4e4e4
+} */
 
 * {
   box-sizing: border-box;

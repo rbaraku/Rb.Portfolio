@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { motion } from 'framer-motion';
 import { images } from '../../constants';
 import { AppWrap, MotionWrap } from '../../wrapper';
 import { client } from '../../client';
@@ -38,6 +38,11 @@ const Footer = () => {
 
   return (
     <>
+                  <motion.div
+        whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.5 }}
+        className='app__footer-cards'
+      >
       <h2 className="footer-head-text">Let's Get In <span>Contact</span></h2>
 
       <div className="app__footer-cards">
@@ -72,6 +77,7 @@ const Footer = () => {
           </h3>
         </div>
       )}
+      </motion.div>
     </>
   )
 }

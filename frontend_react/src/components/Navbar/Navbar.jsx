@@ -12,11 +12,18 @@ import { Button } from 'react-bootstrap';
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
-    const [isFilled, setIsFilled] = useState(false);
+      const [darkMode, setDarkMode] = useState(false);
+    
+      const handleDarkModeToggle = () => {
+        setDarkMode(!darkMode);
+      };
+
+      if (darkMode) {
+        document.querySelector('body').setAttribute('data-theme', 'dark')
+      } else {
+        document.querySelector('body').setAttribute('data-theme', 'light')
+      }
   
-    const handleIconClick = () => {
-      setIsFilled(!isFilled);
-    };
 
     const handleScrollToHome = () => {
       const homeSection = document.getElementById('home');
@@ -24,6 +31,7 @@ const Navbar = () => {
         homeSection.scrollIntoView({ behavior: 'smooth' });
       }
     };
+  
 
   return (
     <nav className='app__navbar'>
@@ -40,13 +48,13 @@ const Navbar = () => {
       </ul>
 
       <div className='dark-mode'>
-        <div className='transparent-button'>
-        {isFilled ? (
-        <MdOutlineDarkMode className='darkSize' onClick={handleIconClick}/>
+        <button className='transparent-button'>
+        {darkMode ? (
+        <BsSun className='darkSize' onClick={handleDarkModeToggle}/>
       ) : (
-        <BsSun className='darkSize' onClick={handleIconClick}/>
+        <MdOutlineDarkMode className='darkSize' onClick={handleDarkModeToggle}/>
         )}
-      </div>
+      </button>
       </div>
 
       <div className='app__navbar-menu'>
@@ -76,22 +84,6 @@ const Navbar = () => {
 
 export default Navbar
 
-
-export const DarkModeButton = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  return (
-    <button
-      className={`dark-mode-button ${isDarkMode ? 'dark' : 'light'}`}
-      onClick={toggleDarkMode}
-    >
-      {isDarkMode ? 'Light Mode' : 'Dark Mode'}
-    </button>
-  );
-};
 
 
 
