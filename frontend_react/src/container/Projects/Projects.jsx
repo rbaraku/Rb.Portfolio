@@ -44,7 +44,7 @@ const Projects = () => {
         transition={{ duration: 0.5 }}
         className='app__projects-info'
       >
-    <h2 className="project-head-text">My Personal <span>Projects</span></h2>
+    <h2 className="project-head-text">My <span>Projects</span></h2>
 
     <div className="app__project-filter">
         {['All', 'Personal Apps', 'School Projects'].map((item, index) => (
