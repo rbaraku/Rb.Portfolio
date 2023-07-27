@@ -94,8 +94,8 @@ const Header = () => {
 
 
 <motion.div className='app__header-socials1'
-        whileInView={{ y: [-100, 0], opacity: [0, 1] }}
-        transition={{ duration: 0.0 }}>
+        animate={{ y: [-100, 0], opacity: [0, 1] }}
+        transition={{ duration: 0.3 }}>
 
 
   <div className='starting-icon app__flex'>
