@@ -13,8 +13,8 @@ import { RiCodeFill } from 'react-icons/ri';
 import { BsLinkedin } from 'react-icons/bs';
 import { BsGithub } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
-import { SlSocialLinkedin }from 'react-icons/sl'
-import { FaLinkedinIn } from 'react-icons/fa'
+import { SlSocialLinkedin }from 'react-icons/sl';
+import { FaLinkedinIn } from 'react-icons/fa';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -32,7 +32,8 @@ const Header = () => {
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
+  }
+
   return (
     <><div className='app__header app__flex'>
       <motion.div
@@ -63,7 +64,7 @@ const Header = () => {
 
         <div className='app__header-buttons'>
           <div className='header-cv app__flex'>
-            <Button href='#' className='down-button'>
+            <Button href={images.RronsResume} target='_blank' className='down-button'>
               <i className='download'>
                 Download CV
               </i>
