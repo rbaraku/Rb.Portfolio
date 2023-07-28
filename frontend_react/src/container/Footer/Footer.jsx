@@ -43,7 +43,7 @@ const Footer = () => {
         transition={{ duration: 0.5 }}
         className='app__footer-cards'
       >
-      <h2 className="footer-head-text">Let's Get In <span>Contact</span></h2>
+      <h2 className="footer-head-text">Let's <span>Connect</span></h2>
 
       <div className="app__footer-cards">
         <div className="app__footer-card ">
