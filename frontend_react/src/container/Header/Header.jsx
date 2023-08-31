@@ -64,9 +64,9 @@ const Header = () => {
 
         <div className='app__header-buttons'>
           <div className='header-cv app__flex'>
-            <Button href={images.RronsResume} target='_blank' className='down-button'>
+            <Button href= "https://rronsresume.netlify.app/" target='_blank' className='down-button'>
               <i className='download'>
-                Download CV
+              Résumé
               </i>
               <BsDownload></BsDownload>
             </Button>
