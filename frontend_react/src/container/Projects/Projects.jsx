@@ -47,7 +47,7 @@ const Projects = () => {
     <h2 className="project-head-text">My <span>Projects</span></h2>
 
     <div className="app__project-filter">
-        {['All', 'Personal Apps', 'School Projects'].map((item, index) => (
+        {['All', 'Personal Apps', 'School Projects', 'Crestron Apps'].map((item, index) => (
           <div
             key={index}
             onClick={() => handleProjectFilter(item)}
